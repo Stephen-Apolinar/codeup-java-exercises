@@ -17,7 +17,7 @@ public class ConsoleExercises {
 //        System.out.println("make a sentence");
 //        String sentence = sc.nextLine();
 //        System.out.println(sentence);
-
+//test
         System.out.println("what is the width? ");
         String width1 = sc.nextLine();
         int width2 = Integer.parseInt(width1);
