@@ -24,8 +24,8 @@ public class CircleApp {
 
 
         System.out.println("Would you like to create another circle? ");
-        input.yesNo();
-        boolean yes = input.yesNo();
+        input.yesNo("Would you like information on another student? Press y or yes to continue.");
+        boolean yes = input.yesNo("Would you like information on another student? Press y or yes to continue.");
 
 
         if (yes) {

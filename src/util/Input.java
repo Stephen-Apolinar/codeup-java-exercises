@@ -5,19 +5,25 @@ import java.util.Scanner;
 public class Input {
     private static Scanner sc = new Scanner(System.in);
 
-    public String getString (String prompt) {
-        prompt = (prompt.isEmpty()) ? "Type: ": prompt;
+    public String getString() {
+        return sc.next();
+    }
+
+    public String getString(String prompt) {
         System.out.println(prompt);
-        return this.sc.nextLine();
+        return getString();
     }
 
-    public String getString () {
-       return this.getString("type: ");
+
+    public boolean yesNo() {
+        String answer = sc.next();  // null
+        // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
+        return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
     }
 
-    public boolean yesNo () {
-        String result = this.getString("type: yes or no (y/n)");
-        return (result.equalsIgnoreCase("y") || result.equalsIgnoreCase(("yes")));
+    public boolean yesNo(String prompt) {
+        System.out.print(prompt);
+        return yesNo();
     }
 
     public int getInt(int min, int max) {
