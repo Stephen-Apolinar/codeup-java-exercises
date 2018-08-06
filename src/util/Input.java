@@ -36,7 +36,15 @@ public class Input {
     }
 
     public int getInt() {
-        return sc.nextInt();
+        String s = getString();
+        int number = 0;
+        try {
+            Integer.valueOf(s);
+        } catch (NumberFormatException e) {
+            System.out.println("that is not an integer");
+            getInt();
+        }
+        return number;
 
     }
     public double getDouble(double min, double max) {
@@ -48,6 +56,14 @@ public class Input {
         return value;
     }
     public double getDouble() {
-        return sc.nextDouble();
+        String s = getString();
+        int number = 0;
+        try {
+            Double.valueOf(s);
+        } catch (NumberFormatException e){
+            System.out.println("that is not an integer");
+            getDouble();
+        }
+        return number;
     }
 }
