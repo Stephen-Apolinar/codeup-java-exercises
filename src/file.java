@@ -14,6 +14,7 @@ public class file {
         Path dataDirectory = Paths.get(directory);
         Path dataFile = Paths.get(directory, fileName);
 
+        //Checks if file exists
         System.out.println(Files.exists(dataFile));
         System.out.println(Files.exists(dataDirectory));
 
